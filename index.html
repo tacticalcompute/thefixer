@@ -9,21 +9,71 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
       background-color: #000;
+      overflow: hidden;
     }
+
     video {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
       display: block;
     }
+
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      color: #ddd;
+      max-width: 90%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #aaa;
+    }
+
+    a.cta {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #111;
+      color: #eee;
+      border: 1px solid #555;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    a.cta:hover {
+      background: #222;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+
   <video autoplay muted loop playsinline>
-    <source src="your-video.mp4" type="video/mp4">
+    <source src="demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <div class="overlay">
+    <h1>The Fixer</h1>
+    <p>Tactical computing and design. Always clean. Always operational.</p>
+    <a class="cta" href="mailto:your@email.com">Let’s Work</a>
+  </div>
+
 </body>
 </html>
